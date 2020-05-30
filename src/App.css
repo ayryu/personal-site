@@ -1,0 +1,15 @@
+a {
+    color:#FFFFFF
+  }
+/* a:hover {
+     color: #3CB371	;
+  } */
+
+a:hover, a:hover + svg, svg:hover {
+  fill: currentColor;
+  color: #3CB371;
+} 
+
+body {
+    background-color: black;
+}
