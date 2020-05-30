@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from './components/navbar';
 import Project from './components/project';
 import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -10,6 +11,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
+
 
 const projects = [
   {  
@@ -67,16 +69,19 @@ const useStyles = makeStyles({
     marginBottom: 'auto',
   },
   container: {
-    display: 'flex',
+    display: 'inline',
     flexWrap: 'nowrap',
     justifyContent: 'center',
     
     '& *': {
-      display: 'flex',
+      // display: 'inline-block',
       flexWrap: 'nowrap',
+      // justifyContent: 'center',
       }
   },
-  
+  griditem: {
+    minWidth: 0,
+  },
 
 });
 
@@ -86,6 +91,7 @@ function App() {
 
   return (
     <div className={classes.root}>
+      <NavBar />
       <div className={classes.text}>
         <Typography variant="h4" style= {{ fontWeight: 'bolder' }}>
           Lifedisassembler
