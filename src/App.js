@@ -92,13 +92,13 @@ function App() {
   return (
     <div className={classes.root}>
       <NavBar />
-      <div className={classes.text}>
+      {/* <div className={classes.text}>
         <Typography variant="h4" style= {{ fontWeight: 'bolder' }}>
           Lifedisassembler
         </Typography>
-      </div>
+      </div> */}
 
-      <div className={classes.links}>
+      {/* <div className={classes.links}>
         <Grid container className={classes.container} spacing={0}>
           
             <Grid item xs={6} sm={3}>
@@ -113,40 +113,17 @@ function App() {
                 <GitHubIcon />
               </IconButton>
             </Grid>
-
-            <Grid item className={classes.griditem} xs={6} sm={3}>
-              <Typography>
-                <IconButton>
-                  <Link variant="overline" style={{ textDecoration: 'none'}}>
-                    Resume
-                  </Link>
-                </IconButton>
-              </Typography>
-            </Grid>
-
-            <Grid item className={classes.griditem} xs={6} sm={3}>
-              <Typography >
-                <IconButton>
-                  <Link variant="overline" style={{ textDecoration: 'none'}}>
-                  Projects
-                  </Link>
-                  <ExpandMoreIcon className={classes.expand} />
-                </IconButton>
-
-                </Typography>
-            </Grid>
-
           
-        </Grid>
-      </div>
+        </Grid> 
+      </div> */}
 
-        <Grid container spacing={1}>  
+        {/* <Grid container spacing={1}>  
           {projects.map(project => 
             <Grid item xs={12} >
               <Project project={project}/>
             </Grid>
           )}
-        </Grid>
+        </Grid> */}
 
     </div>
   );

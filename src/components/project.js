@@ -8,14 +8,16 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 'auto',
+      maxWidth: '100%',
+    //   maxHeight: 'auto',
     },
     media: {
-      height: 150,
+      height: 0,
+      paddingTop: '56.25%',
     },
-    content: {
-        height: 20,
-    }
+    // content: {
+    //     height: 20,
+    // }
   });
 
 const Project = ({ project }) => {
