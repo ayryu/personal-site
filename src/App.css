@@ -1,11 +1,8 @@
 a {
     color:#FFFFFF
   }
-/* a:hover {
-     color: #3CB371	;
-  } */
 
-a:hover, a:hover + svg, svg:hover {
+button:hover > * {
   fill: currentColor;
   color: #3CB371;
 } 
