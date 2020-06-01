@@ -9,15 +9,11 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
       maxWidth: '100%',
-    //   maxHeight: 'auto',
     },
     media: {
       height: 0,
       paddingTop: '56.25%',
     },
-    // content: {
-    //     height: 20,
-    // }
   });
 
 const Project = ({ project }) => {
@@ -25,7 +21,7 @@ const Project = ({ project }) => {
     return (
         <>
         <Card className={classes.root}>
-            <CardActionArea>
+            <CardActionArea href={project.link} >
                 <CardMedia
                 className={classes.media}
                 image="/static/images/cards/dark-forest.jpg"

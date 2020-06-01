@@ -14,28 +14,28 @@ import Box from '@material-ui/core/Box';
 const projects = [
     {  
       name: 'Bekan',
-      link: 'link1',
+      link: 'https://bekan.herokuapp.com',
       github: 'gh1',
       description: 'description1',
       image: ''
     }, 
     {  
-      name: 'KH',
-      link: 'link2',
+      name: 'Kezuru',
+      link: 'https://github.com/ayryu/Kezuru',
       github: 'gh2',
       description: 'description2',
       image: ''
     },
     {  
-      name: 'Bekan',
-      link: 'link1',
+      name: 'Pokemon Battle Data',
+      link: 'https://github.com/ayryu/PBD',
       github: 'gh1',
       description: 'description1',
       image: ''
     }, 
     {  
-      name: 'KH',
-      link: 'link2',
+      name: 'Smash Tournament Winner',
+      link: 'https://github.com/ayryu/TourneyW',
       github: 'gh2',
       description: 'description2',
       image: ''
@@ -69,9 +69,12 @@ const useStyles = makeStyles({
         backgroundColor: 'transparent',
         boxShadow: 'none',
     },
-    tabs: {
+    toolbar: {
         flexGrow: 1,
         justifyContent: 'flex-end',
+    },
+    tabs: {
+
     },
 });
 
@@ -86,9 +89,13 @@ const NavBar = () => {
     return (
         <div className={classes.root}>
             <AppBar className={classes.bar} position='static'>
-                <Toolbar  className={classes.tabs}>
+                <Toolbar  className={classes.toolbar}>
                     
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+                <Tabs 
+                value={value} 
+                onChange={handleChange} 
+                aria-label="simple tabs example"
+                TabIndicatorProps={{style: {backgroundColor: "#20B2AA"}}}>
                     <Tab label="About Life" />
                     <Tab label="Projects" />
                 </Tabs>
