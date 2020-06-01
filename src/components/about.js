@@ -13,13 +13,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import Paper from '@material-ui/core/Paper';
-import Grow from '@material-ui/core/Grow';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
 import Collapse from '@material-ui/core/Collapse';
-// import sd from '../photos/resume.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,6 +35,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+      },
+      icon: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+          '& > *': {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          },
       },
 }));
 
@@ -74,31 +78,33 @@ const About = () => {
                         </div>
 
                             <Grid container className={classes.links} spacing={0}>
-
-                                <Grid item>
-
-                                    <div className={classes.container}>
-                                        <Collapse in={checked} timeout='auto' unmountOnExit>
+                                        
+                            <Collapse in={checked} timeout='auto' unmountOnExit>
                                             <Card>
                                                 <CardMedia 
-                                                style = {{ height: 0,
-                                                    paddingTop: '56.25%',}}
+                                                style = {{ height: '50vh', width: '50vw'}}
                                                 image='/static/images/pics/resume.png'/>
                                             </Card>
                                         </Collapse>
-                                        </div>
+                                <Grid item>
+                                        {/* <Collapse in={checked} timeout='auto' unmountOnExit>
+                                            <Card>
+                                                <CardMedia 
+                                                style = {{ height: '50vh', width: '50vw'}}
+                                                image='/static/images/pics/resume.png'/>
+                                            </Card>
+                                        </Collapse> */}
 
-                                        <FormControlLabel
-                                            control={<IconButton>
-                                                        <Tooltip title='Resume' arrow>
-                                                            <AssignmentIndOutlinedIcon 
-                                                                fontSize='large'
-                                                                onClick={handleChange} />
-                                                        </Tooltip>
-                                                    </IconButton>
-                                                    }
-                                        />
+                                            <IconButton>
+                                                <Tooltip title='Resume' arrow>
+                                                    <AssignmentIndOutlinedIcon 
+                                                        fontSize='large'
+                                                        onClick={handleChange} />
+                                                </Tooltip>
+                                            </IconButton>
+
                                 </Grid>
+
 
                                 <Grid item>
                                     <IconButton>
@@ -136,6 +142,7 @@ const About = () => {
                             
                             </Grid>
 
+                            
             </Container>
     
     )
