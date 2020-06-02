@@ -12,40 +12,7 @@ import Grow from '@material-ui/core/Grow';
 const useStyles = makeStyles({
   root: {
     maxHeight: 'auto',
-  },
-  text: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  links: {
-    display: 'flex',
-    flexGrow: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    '& *': {
-      display: 'inline-block',
-      justifyContent: 'center',
-      alignItems: 'center',
-    }
-  },
-  expand: {
-    marginTop: 'auto',
-    marginBottom: 'auto',
-  },
-  container: {
-    display: 'inline',
-    flexWrap: 'nowrap',
-    justifyContent: 'center',
-    
-    '& *': {
-      flexWrap: 'nowrap',
-      }
-  },
-  griditem: {
-    minWidth: 0,
-  },
-
+  }
 });
 
 function App() {

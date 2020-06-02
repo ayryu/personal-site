@@ -75,7 +75,6 @@ const useStyles = makeStyles({
         justifyContent: 'flex-end',
     },
     tabs: {
-      // height: '100vh',
       background: "#000"
     },
 });

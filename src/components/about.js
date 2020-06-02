@@ -70,38 +70,31 @@ const About = () => {
                             <Typography variant="h6" style= {{ fontWeight: 'bolder' }}>
                             Hi, I'm Life!
                             </Typography>
-                        </div>
-
-                        <div className={classes.text}>
                             <Typography variant="body1">
                             I'm a new grad pursuing a career in software development.
                             </Typography>
-                        </div>
-
-                        <div className={classes.text}>
                             <Typography variant="body1">
                             I like building web apps and dark mode.
                             </Typography>
                         </div>
 
-                            <Grid container className={classes.links} background="#000" spacing={0}>
-                                        
+                        <Grid container className={classes.links} background="#000" spacing={0}>             
                             <Collapse in={checked} timeout='auto' unmountOnExit>
                                             <Card>
                                                 <CardMedia 
                                                 className={classes.media}
                                                 image='/static/images/pics/resume.png'/>
                                             </Card>
-                                        </Collapse>
-                                <Grid item>
+                            </Collapse>
 
-                                            <IconButton>
-                                                <Tooltip title='Resume' arrow>
-                                                    <AssignmentIndOutlinedIcon 
-                                                        fontSize='large'
-                                                        onClick={handleChange} />
-                                                </Tooltip>
-                                            </IconButton>
+                                <Grid item>
+                                    <IconButton>
+                                        <Tooltip title='Resume' arrow>
+                                            <AssignmentIndOutlinedIcon 
+                                                fontSize='large'
+                                                onClick={handleChange} />
+                                        </Tooltip>
+                                    </IconButton>
 
                                 </Grid>
 
@@ -140,9 +133,8 @@ const About = () => {
                                     </IconButton>
                                 </Grid>
                             
-                            </Grid>
-
-                            
+                        </Grid>
+   
             </Container>
     )
 }

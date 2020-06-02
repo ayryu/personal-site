@@ -14,8 +14,6 @@ const useStyles = makeStyles({
       height: 0,
       paddingTop: '56.25%',
     },
-    content: {
-    },
   });
 
 const Project = ({ project }) => {
