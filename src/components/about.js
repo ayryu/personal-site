@@ -33,18 +33,12 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
       },
-      icon: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-          '& > *': {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          },
+      collapse: {
+        maxWidth:'50vh',
+        alignSelf: 'center'
       },
       media: {
-        objectFit: 'cover',
+        // height: '70vh', width: '50vh' for perfect visibility
         height: '70vh',
         width: '50vh',
       },
@@ -78,15 +72,15 @@ const About = () => {
                             </Typography>
                         </div>
 
-                        <Grid container className={classes.links} background="#000" spacing={0}>             
-                            <Collapse in={checked} timeout='auto' unmountOnExit>
-                                            <Card>
-                                                <CardMedia 
-                                                className={classes.media}
-                                                image='/static/images/pics/resume.png'/>
-                                            </Card>
-                            </Collapse>
+                        <Collapse className={classes.collapse} in={checked} timeout='auto' unmountOnExit>
+                                <Card>
+                                    <CardMedia 
+                                    className={classes.media}
+                                    image='/static/images/pics/resume.png'/>
+                                </Card>
+                        </Collapse>
 
+                        <Grid container className={classes.links} background="#000" spacing={0}>     
                                 <Grid item>
                                     <IconButton>
                                         <Tooltip title='Resume' arrow>
@@ -95,9 +89,7 @@ const About = () => {
                                                 onClick={handleChange} />
                                         </Tooltip>
                                     </IconButton>
-
                                 </Grid>
-
 
                                 <Grid item>
                                     <IconButton>
@@ -132,7 +124,6 @@ const About = () => {
                                         </Tooltip>
                                     </IconButton>
                                 </Grid>
-                            
                         </Grid>
    
             </Container>

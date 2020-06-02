@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import About from './about';
 import Project from '../components/project';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
 import Grid from '@material-ui/core/Grid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -112,7 +111,7 @@ const NavBar = () => {
             <TabPanel className={classes.tabs} value={value} index={1}>
                 <Grid container spacing={1}>  
                     {projects.map(project => 
-                        <Grid item xs={12} >
+                        <Grid key={project.name} item xs={12} >
                             <Project project={project}/>
                         </Grid>
                     )}
