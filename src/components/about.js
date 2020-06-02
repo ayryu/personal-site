@@ -21,13 +21,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignContent: 'center',
-        height: '100vh',
-    },
-    media: {
-        height: '100vh',
+        background: "#000",
     },
     text: {
-        display: 'flex',
+        display: 'inline-block',
         justifyContent: 'center',
         alignItems: 'center',
       },
@@ -45,6 +42,11 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'center',
             alignItems: 'center',
           },
+      },
+      media: {
+        objectFit: 'cover',
+        height: '70vh',
+        width: '50vh',
       },
 }));
 
@@ -73,27 +75,25 @@ const About = () => {
                         <div className={classes.text}>
                             <Typography variant="body1">
                             I'm a new grad pursuing a career in software development.
-                            {/* I like working on web applications but I'm also interested in working new things as well. */}
                             </Typography>
                         </div>
 
-                            <Grid container className={classes.links} spacing={0}>
+                        <div className={classes.text}>
+                            <Typography variant="body1">
+                            I like building web apps and dark mode.
+                            </Typography>
+                        </div>
+
+                            <Grid container className={classes.links} background="#000" spacing={0}>
                                         
                             <Collapse in={checked} timeout='auto' unmountOnExit>
                                             <Card>
                                                 <CardMedia 
-                                                style = {{ height: '50vh', width: '50vw'}}
+                                                className={classes.media}
                                                 image='/static/images/pics/resume.png'/>
                                             </Card>
                                         </Collapse>
                                 <Grid item>
-                                        {/* <Collapse in={checked} timeout='auto' unmountOnExit>
-                                            <Card>
-                                                <CardMedia 
-                                                style = {{ height: '50vh', width: '50vw'}}
-                                                image='/static/images/pics/resume.png'/>
-                                            </Card>
-                                        </Collapse> */}
 
                                             <IconButton>
                                                 <Tooltip title='Resume' arrow>
@@ -144,7 +144,6 @@ const About = () => {
 
                             
             </Container>
-    
     )
 }
 
