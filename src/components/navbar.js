@@ -64,6 +64,7 @@ const projects = [
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
+        height: '100vh',
     },
     bar: {
         backgroundColor: 'transparent',
@@ -74,7 +75,8 @@ const useStyles = makeStyles({
         justifyContent: 'flex-end',
     },
     tabs: {
-
+      // height: '100vh',
+      background: "#000"
     },
 });
 
@@ -89,12 +91,12 @@ const NavBar = () => {
     return (
         <div className={classes.root}>
             <AppBar className={classes.bar} position='static'>
-                <Toolbar  className={classes.toolbar}>
+                <Toolbar className={classes.toolbar}>
                     
                 <Tabs 
                 value={value} 
                 onChange={handleChange} 
-                aria-label="simple tabs example"
+                aria-label="Menu Tabs"
                 TabIndicatorProps={{style: {backgroundColor: "#20B2AA"}}}>
                     <Tab label="About Life" />
                     <Tab label="Projects" />
@@ -103,11 +105,12 @@ const NavBar = () => {
                 </Toolbar>
             </AppBar>
 
-            <TabPanel value={value} index={0}>
-                    <About />
-                </TabPanel>
+            <TabPanel className={classes.tabs} value={value} index={0}>
+              <About/>
+            </TabPanel>
 
-            <TabPanel value={value} index={1}>
+
+            <TabPanel className={classes.tabs} value={value} index={1}>
                 <Grid container spacing={1}>  
                     {projects.map(project => 
                         <Grid item xs={12} >

@@ -9,40 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 
 
-const projects = [
-  {  
-    name: 'Bekan',
-    link: 'link1',
-    github: 'gh1',
-    description: 'description1',
-    image: ''
-  }, 
-  {  
-    name: 'KH',
-    link: 'link2',
-    github: 'gh2',
-    description: 'description2',
-    image: ''
-  },
-  {  
-    name: 'Bekan',
-    link: 'link1',
-    github: 'gh1',
-    description: 'description1',
-    image: ''
-  }, 
-  {  
-    name: 'KH',
-    link: 'link2',
-    github: 'gh2',
-    description: 'description2',
-    image: ''
-  }
-]
-
 const useStyles = makeStyles({
   root: {
-    // flexGrow: 1,
+    maxHeight: 'auto',
   },
   text: {
     display: 'flex',
@@ -70,9 +39,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     
     '& *': {
-      // display: 'inline-block',
       flexWrap: 'nowrap',
-      // justifyContent: 'center',
       }
   },
   griditem: {
@@ -82,7 +49,6 @@ const useStyles = makeStyles({
 });
 
 function App() {
-  const [ projectlist, setProjectList ] = useState([])
   const classes = useStyles();
 
   return (

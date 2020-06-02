@@ -6,7 +6,3 @@ button:hover > * {
   fill: currentColor;
   color: #20B2AA;
 } 
-
-body {
-    background-color: black;
-}
