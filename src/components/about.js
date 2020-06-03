@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
 import Links from './links';
+import Icon from './icon';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,7 +46,8 @@ const About = () => {
                             </Typography>
                         </div>
 
-                        <Links />
+                        {/* <Links /> */}
+                        <Icon />
    
             </Container>
     )

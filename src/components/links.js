@@ -13,18 +13,6 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        marginTop: theme.spacing(1),
-        display: 'flex',
-        flexDirection: 'column',
-        alignContent: 'center',
-        background: "#000",
-    },
-    text: {
-        display: 'inline-block',
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
       links: {
         display: 'flex',
         justifyContent: 'center',
@@ -59,6 +47,62 @@ const Links = () => {
         setSkillsPanel(false);
       };
 
+    const iconInfo = [
+        {
+            title: 'Skills',
+            icon: 'SKILLS',
+            clickAction: handleSkillsChange,
+        },
+        {
+            title: 'Resume',
+            icon: 'RESUME',
+            clickAction: handleResumeChange,
+        },
+        {
+            title: 'lifedisassembler@gmail.com',
+            icon: 'EMAIL',
+            clickAction: event => window.location.href='mailto:lifedisassembler@gmail.com',
+        },
+        {
+            title: 'Github',
+            icon: 'GITHUB',
+            clickAction: event => window.location.href='https://github.com/ayryu',
+        },
+        {
+            title: 'LinkedIn',
+            icon: 'LINKEDIN',
+            clickAction: event => window.location.href='https://www.linkedin.com/in/alexander-ryu/',
+        },
+    ]
+
+    const getIcon = (icon) => {
+        switch(icon) {
+            case 'SKILLS':
+                return(<BeenhereIcon 
+                    fontSize='large'
+                    onClick={handleSkillsChange} />);
+            case 'RESUME':
+                return(<AssignmentIndOutlinedIcon 
+                    fontSize='large'
+                    onClick={handleResumeChange} />); 
+            case 'EMAIL':
+                return(<MailOutlineIcon 
+                    fontSize='large' 
+                    aria-label='Email'
+                    onClick={event => window.location.href='mailto:lifedisassembler@gmail.com'}/>);      
+            case 'GITHUB':
+                return(<GitHubIcon 
+                    fontSize='large' 
+                    aria-label='Github'
+                    onClick={event => window.location.href='https://github.com/ayryu'}
+                    />);                  
+            default:
+                return(<LinkedInIcon 
+                    fontSize='large'
+                    aria-label='LinkedIn' 
+                    onClick={event => window.location.href='https://www.linkedin.com/in/alexander-ryu/'}/>);
+        }
+    }
 
     return (
         <>
@@ -78,7 +122,8 @@ const Links = () => {
                     </Card>
             </Collapse>
 
-        <Grid container className={classes.links} background="#000" spacing={0}>     
+        <Grid container className={classes.links} background="#000" spacing={0}> 
+
             <Grid item>
                 <IconButton>
                     <Tooltip title='Skills' arrow>
@@ -132,7 +177,7 @@ const Links = () => {
                     </Tooltip>
                 </IconButton>
             </Grid>
-            
+
         </Grid>
     </>
     )
