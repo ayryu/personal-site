@@ -17,7 +17,7 @@ import Collapse from '@material-ui/core/Collapse';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',
         alignContent: 'center',
@@ -34,13 +34,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
       },
       collapse: {
-        maxWidth:'50vh',
-        alignSelf: 'center'
+        // maxWidth:'20%',
+        // maxHeight:'40%',
+        alignSelf: 'center',
+        width: '80%'
       },
       media: {
-        // height: '70vh', width: '50vh' for perfect visibility
-        height: '70vh',
-        width: '50vh',
+        // height: '70vh', width: '50vh' for perfect visibility if madWidth/maxHeight: 100%
+        height: 0,
+        paddingTop: '100%',
+        paddingBottom: '45%'
       },
 }));
 
@@ -93,11 +96,11 @@ const About = () => {
 
                                 <Grid item>
                                     <IconButton>
-                                        <Tooltip title='ayryu@uwaterloo.ca' arrow>
+                                        <Tooltip title='lifedisassembler@gmail.com' arrow>
                                             <MailOutlineIcon 
                                             fontSize='large' 
                                             aria-label='Email'
-                                            onClick={event => window.location.href='mailto:ayryu@uwaterloo.ca'}/>
+                                            onClick={event => window.location.href='mailto:lifedisassembler@gmail.com'}/>
                                         </Tooltip>
                                     </IconButton>
                                 </Grid>
