@@ -60,23 +60,30 @@ const projects = [
     );
   }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         height: '100vh',
     },
-    bar: {
+    appbar: {
         backgroundColor: 'transparent',
         boxShadow: 'none',
+        
+    },
+    tab: {
+      fontSize: 8,
+      minWidth: 'auto'
+    },
+    tabPanels: {
+      background: "#000",
+      paddingTop: theme.spacing(4),
     },
     toolbar: {
-        flexGrow: 1,
-        justifyContent: 'flex-end',
-    },
-    tabs: {
-      background: "#000"
-    },
-});
+      // flexGrow: 1,
+      justifyContent: 'flex-end',
+      backgroundColor: 'transparent',
+  },
+}));
 
 const NavBar = () => {
     const [value, setValue] = React.useState(0);
@@ -88,27 +95,28 @@ const NavBar = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar className={classes.bar} position='static'>
+            <AppBar className={classes.appbar} position='fixed'>
                 <Toolbar className={classes.toolbar}>
                     
-                <Tabs 
+                <Tabs
+                 className={classes.tabs}
                 value={value} 
                 onChange={handleChange} 
                 aria-label="Menu Tabs"
                 TabIndicatorProps={{style: {backgroundColor: "#20B2AA"}}}>
-                    <Tab label="About Life" />
-                    <Tab label="Projects" />
+                    <Tab className={classes.tab} label="About Life" />
+                    <Tab className={classes.tab} label="Projects" />
                 </Tabs>
 
                 </Toolbar>
             </AppBar>
 
-            <TabPanel className={classes.tabs} value={value} index={0}>
+            <TabPanel className={classes.tabPanels} value={value} index={0}>
               <About/>
             </TabPanel>
 
 
-            <TabPanel className={classes.tabs} value={value} index={1}>
+            <TabPanel className={classes.tabPanels} value={value} index={1}>
                 <Grid container spacing={1}>  
                     {projects.map(project => 
                         <Grid key={project.name} item xs={12} >

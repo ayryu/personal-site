@@ -9,10 +9,15 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
       maxWidth: '100%',
+      backgroundColor: 'transparent',
     },
     media: {
       height: 0,
-      paddingTop: '56.25%',
+      paddingTop: '36.25%',
+    },
+    content: {
+        margin: -10,
+
     },
   });
 
