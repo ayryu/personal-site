@@ -13,6 +13,10 @@ const darkTheme = createMuiTheme({
       default: "#000",
     }
   },
+  typography: {
+    fontFamily: `'Work Sans', sans-serif`,
+    "fontWeightRegular": 500
+  },
 });
 
 ReactDOM.render(

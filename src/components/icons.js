@@ -32,26 +32,26 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Icon = () => {
+const Icons = () => {
     const classes = useStyles();
-    const [ skillsPanel, setSkillsPanel] = useState(false);
+    // const [ skillsPanel, setSkillsPanel] = useState(false);
     const [ resumePanel, setResumePanel] = useState(false);
 
-    const handleSkillsChange = () => {
-        setSkillsPanel((prev) => !prev);
-        setResumePanel(false);
-      };
+    // const handleSkillsChange = () => {
+    //     setSkillsPanel((prev) => !prev);
+    //     setResumePanel(false);
+    //   };
     
       const handleResumeChange = () => {
         setResumePanel((prev) => !prev);
-        setSkillsPanel(false);
+        // setSkillsPanel(false);
       };
 
     const collapseInfo = [
-        {
-            in: skillsPanel,
-            image: '/static/images/pics/resume.png',
-        },
+        // {
+        //     in: skillsPanel,
+        //     image: '/static/images/pics/resume.png',
+        // },
         {
             in: resumePanel,
             image: '/static/images/pics/resume.png',
@@ -59,10 +59,10 @@ const Icon = () => {
     ]
 
     const icons = [
-        {
-            title: 'Skills',
-            id: 'SKILLS',
-        },
+        // {
+        //     title: 'Skills',
+        //     id: 'SKILLS',
+        // },
         {
             title: 'Resume',
             id: 'RESUME',
@@ -83,10 +83,10 @@ const Icon = () => {
 
     const getIcon = (icon) => {
         switch(icon) {
-            case 'SKILLS':
-                return(<BeenhereIcon 
-                    fontSize='large'
-                    onClick={handleSkillsChange} />);
+            // case 'SKILLS':
+            //     return(<BeenhereIcon 
+            //         fontSize='large'
+            //         onClick={handleSkillsChange} />);
             case 'RESUME':
                 return(<AssignmentIndOutlinedIcon 
                     fontSize='large'
@@ -124,7 +124,6 @@ const Icon = () => {
             )}
 
             <Grid container className={classes.links} background="#000" spacing={0}>
-
                 {icons.map(icon =>
                     <Grid item>
                         <IconButton>
@@ -139,4 +138,4 @@ const Icon = () => {
     )
 }
 
-export default Icon;
+export default Icons;

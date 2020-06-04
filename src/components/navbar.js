@@ -15,29 +15,29 @@ const projects = [
       name: 'Bekan',
       link: 'https://bekan.herokuapp.com',
       github: 'gh1',
-      description: 'description1',
-      image: ''
+      description: 'Find and discuss potential solutions to relevant social issues using evidence-based research',
+      image: '/static/images/cards/dark-forest.jpg'
     }, 
     {  
       name: 'Kezuru',
       link: 'https://github.com/ayryu/Kezuru',
       github: 'gh2',
-      description: 'description2',
-      image: ''
+      description: 'A repository for learning about technique-driven cooking methods and the ubiquity of their applications',
+      image: '/static/images/cards/kezuru.jpeg'
     },
     {  
       name: 'Pokemon Battle Data',
       link: 'https://github.com/ayryu/PBD',
       github: 'gh1',
-      description: 'description1',
-      image: ''
+      description: 'A source for learning about relevant Pokemon stats and teambuilding for the Generation 8 OU metagame',
+      image: '/static/images/cards/pbd.png'
     }, 
     {  
       name: 'Smash Tournament Winner',
       link: 'https://github.com/ayryu/TourneyW',
       github: 'gh2',
-      description: 'description2',
-      image: ''
+      description: 'Aggregating frame data for Super Smash Bros. Ultimate characters related to improving movement and frame advantage',
+      image: '/static/images/cards/smash.jpg'
     }
   ]
 
