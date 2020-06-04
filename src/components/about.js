@@ -8,7 +8,7 @@ import Icons from './icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(4),
         display: 'flex',
         flexDirection: 'column',
         alignContent: 'center',
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: theme.spacing(1),
       },
 }));
 
@@ -37,16 +38,17 @@ const About = () => {
                         src='/static/images/pics/profile.jpg'/>
 
                         <div className={classes.text}>
-                            <Typography variant="h5" style= {{ fontWeight: 'bolder' }}>
-                            Hi, I'm Life!
+                            <Typography variant="h5" style={{ fontWeight: 'bolder' }}>
+                            Hi, I'm Alex Ryu!
                             </Typography>
-                            <Typography variant="body1">
-                            I'm a new grad pursuing a career in software development.
+                            <Typography variant="body2">
+                            I like creative problem-solving and learning about self-improvement.
                             </Typography>
-                            <Typography variant="body1">
-                            I like building web apps and dark mode.
+                            <Typography variant="body2">
+                            I am available for a full-time software developer position starting August 2020.
                             </Typography>
                         </div>
+
                         <Icons />
    
             </Container>

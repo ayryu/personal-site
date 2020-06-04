@@ -68,7 +68,7 @@ const Icons = () => {
             id: 'RESUME',
         },
         {
-            title: 'lifedisassembler@gmail.com',
+            title: 'ayryu@uwaterloo.ca',
             id: 'EMAIL',
         },
         {
@@ -95,7 +95,7 @@ const Icons = () => {
                 return(<MailOutlineIcon 
                     fontSize='large' 
                     aria-label='Email'
-                    onClick={event => window.location.href='mailto:lifedisassembler@gmail.com'}/>);      
+                    onClick={event => window.location.href='mailto:ayryu@uwaterloo.ca'}/>);      
             case 'GITHUB':
                 return(<GitHubIcon 
                     fontSize='large' 
