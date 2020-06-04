@@ -4,9 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-
-import Links from './links';
-import Icon from './icon';
+import Icons from './icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
         alignContent: 'center',
         background: "#000",
     },
+    avatar: {
+        width: theme.spacing(9),
+        height: theme.spacing(9),
+      },
     text: {
         display: 'inline-block',
         justifyContent: 'center',
@@ -29,13 +31,13 @@ const About = () => {
     return (
             <Container maxWidth="sm" className={classes.root}>
                 <CssBaseline />
-
                         <Avatar
-                        alt='User'
+                        className={classes.avatar}
+                        alt='Profile'
                         src='/static/images/pics/profile.jpg'/>
 
                         <div className={classes.text}>
-                            <Typography variant="h6" style= {{ fontWeight: 'bolder' }}>
+                            <Typography variant="h5" style= {{ fontWeight: 'bolder' }}>
                             Hi, I'm Life!
                             </Typography>
                             <Typography variant="body1">
@@ -45,9 +47,7 @@ const About = () => {
                             I like building web apps and dark mode.
                             </Typography>
                         </div>
-
-                        {/* <Links /> */}
-                        <Icon />
+                        <Icons />
    
             </Container>
     )

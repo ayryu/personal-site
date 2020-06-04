@@ -29,11 +29,11 @@ const Project = ({ project }) => {
             <CardActionArea href={project.link} >
                 <CardMedia
                 className={classes.media}
-                image="/static/images/cards/dark-forest.jpg"
+                image={project.image}
                 title={project.name}
                 />
                 <CardContent className={classes.content}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                         {project.name}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
