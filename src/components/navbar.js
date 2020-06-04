@@ -15,7 +15,7 @@ const projects = [
       name: 'Bekan',
       link: 'https://bekan.herokuapp.com',
       github: 'gh1',
-      description: 'Find and discuss potential solutions to relevant social issues using evidence-based research',
+      description: 'Finding, sharing, and discussing potential solutions to relevant social issues using evidence-based research',
       image: '/static/images/cards/dark-forest.jpg'
     }, 
     {  
@@ -104,7 +104,7 @@ const NavBar = () => {
                 onChange={handleChange} 
                 aria-label="Menu Tabs"
                 TabIndicatorProps={{style: {backgroundColor: "#20B2AA"}}}>
-                    <Tab className={classes.tab} label="About Life" />
+                    <Tab className={classes.tab} label="About Alex" />
                     <Tab className={classes.tab} label="Projects" />
                 </Tabs>
 
