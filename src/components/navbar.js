@@ -66,9 +66,10 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: `'Work Sans', sans-serif`,
     },
     appbar: {
+        display: 'flex',
         backgroundColor: 'transparent',
         boxShadow: 'none',
-        
+        width: 'auto',
     },
     tab: {
       fontSize: 26,
@@ -81,8 +82,10 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: `'Work Sans', sans-serif`,
     },
     toolbar: {
+      display: 'flex',
       justifyContent: 'flex-end',
       backgroundColor: 'transparent',
+      width: 'auto',
   },
 }));
 
