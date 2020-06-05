@@ -1,5 +1,5 @@
 This is a live version of my personal website:
-[alexryu.ca](https://alexryu.ca)
+[https://alexryu.ca](https://alexryu.ca)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
