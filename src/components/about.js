@@ -8,15 +8,15 @@ import Icons from './icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginTop: theme.spacing(4),
+        marginTop: theme.spacing(8),
         display: 'flex',
         flexDirection: 'column',
         alignContent: 'center',
         background: "#000",
     },
     avatar: {
-        width: theme.spacing(9),
-        height: theme.spacing(9),
+        width: theme.spacing(16),
+        height: theme.spacing(16),
       },
     text: {
         display: 'inline-block',
@@ -24,13 +24,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginBottom: theme.spacing(1),
       },
+    // summary: {
+    //     fontSize: 18,
+    // },
 }));
 
 const About = () => {
     const classes = useStyles();
 
     return (
-            <Container maxWidth="sm" className={classes.root}>
+            <Container maxWidth="xl" className={classes.root}>
                 <CssBaseline />
                         <Avatar
                         className={classes.avatar}
@@ -38,13 +41,13 @@ const About = () => {
                         src='/static/images/pics/profile.jpg'/>
 
                         <div className={classes.text}>
-                            <Typography variant="h5" style={{ fontWeight: 'bolder' }}>
+                            <Typography variant="h3" style={{ fontWeight: 'bolder' }}>
                             Hi, I'm Alex Ryu!
                             </Typography>
-                            <Typography variant="body2">
-                            I like creative problem-solving and learning about self-improvement.
+                            <Typography variant="h4">
+                            I like working on creative endeavours and learning about self-improvement.
                             </Typography>
-                            <Typography variant="body2">
+                            <Typography variant="h4">
                             I am available for a full-time software developer position starting August 2020.
                             </Typography>
                         </div>

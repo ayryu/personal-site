@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-production": "react-scripts build && pscp -r ./build/* ayryu@142.93.149.201:/var/www/alexryu.ca/html"
   },
   "eslintConfig": {
     "extends": "react-app"

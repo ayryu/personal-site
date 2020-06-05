@@ -9,7 +9,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
-
 const projects = [
     {  
       name: 'Bekan',
@@ -64,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         height: '100vh',
+        fontFamily: `'Work Sans', sans-serif`,
     },
     appbar: {
         backgroundColor: 'transparent',
@@ -71,15 +71,16 @@ const useStyles = makeStyles((theme) => ({
         
     },
     tab: {
-      fontSize: 8,
-      minWidth: 'auto'
+      fontSize: 26,
+      minWidth: 'auto',
+      textTransform: "none"
     },
     tabPanels: {
       background: "#000",
-      paddingTop: theme.spacing(4),
+      paddingTop: theme.spacing(5),
+      fontFamily: `'Work Sans', sans-serif`,
     },
     toolbar: {
-      // flexGrow: 1,
       justifyContent: 'flex-end',
       backgroundColor: 'transparent',
   },
