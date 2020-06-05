@@ -12,28 +12,28 @@ const Resume = ({ resume, toggleView, media, viewState, handleCollapse }) => {
 
     const EnableLink = () => {
         if(viewState) {
-            return (
-                <div style={{ display: 'flex' }}>
-                    <Link color="inherit" href='#resume' onClick={toggleView}>
+            return ( //currently viewing light mode
+                <div style={{ display: 'flex' }}> 
+                    <Link style={{ fontSize: 26, }} color="inherit" href='#resume' onClick={toggleView}>
                         Resume (Dark Mode)
                     </Link>
-                    <Typography>|</Typography>
-                    <Typography style={{ color: "#20B2AA" }}>Resume (Light Mode)</Typography>
+                    <Typography style={{ fontSize: 26, }}>|</Typography>
+                    <Typography style={{ color: "#20B2AA", fontSize: 26, }}>Resume (Light Mode)</Typography>
                     <IconButton style={{ padding: 0 }} onClick={handleCollapse}>
-                        <ExpandMoreIcon style={{ transform: 'rotate(180deg)', }}/>
+                        <ExpandMoreIcon style={{ transform: 'rotate(180deg)', width: 30, height: 30,}}/>
                     </IconButton>
                 </div>
             ) 
         }
-            return (
+            return ( //currently viewing dark mode
                 <div style={{ display: 'flex' }}>
-                    <Typography style={{ color: "#20B2AA" }}>Resume (Dark Mode)</Typography>
-                    <Typography>|</Typography>
-                    <Link color="inherit" href='#resume' onClick={toggleView}>
+                    <Typography style={{ color: "#20B2AA", fontSize: 26, }}>Resume (Dark Mode)</Typography>
+                    <Typography style={{ fontSize: 26, }}>|</Typography>
+                    <Link style={{ fontSize: 26, }} color="inherit" href='#resume' onClick={toggleView}>
                         Resume (Light Mode)
                     </Link>
                     <IconButton style={{ padding: 0 }} onClick={handleCollapse}>
-                        <ExpandMoreIcon style={{ transform: 'rotate(180deg)', }}/>
+                        <ExpandMoreIcon style={{ transform: 'rotate(180deg)', width: 30, height: 30,}}/>
                     </IconButton>
                 </div>
             )
