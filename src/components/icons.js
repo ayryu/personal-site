@@ -127,11 +127,13 @@ const Icons = () => {
             <Grid container className={classes.links} background="#000" spacing={0}>
                 {icons.map(icon =>
                     <Grid item key={icon.id}>
-                        <IconButton onClick={icon.clickHandler}>
-                            <Tooltip title={icon.title} arrow>
+                        
+                        <Tooltip title={icon.title} arrow>
+                        <   IconButton onClick={icon.clickHandler}>
                                 {getIcon(icon.id)}
-                            </Tooltip>
-                        </IconButton>
+                            </IconButton>
+                        </Tooltip>
+                        
                     </Grid>
                 )}
             </Grid>
