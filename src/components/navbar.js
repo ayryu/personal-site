@@ -41,7 +41,7 @@ const projects = [
   ]
 
   function TabPanel({ children, value, index, ...other }) {
-  
+
     return (
       <div
         role="tabpanel"
@@ -94,6 +94,8 @@ const NavBar = () => {
     const classes = useStyles();
 
     const handleChange = (event, newValue) => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         setValue(newValue);
       };
 
@@ -118,7 +120,6 @@ const NavBar = () => {
             <TabPanel className={classes.tabPanels} value={value} index={0}>
               <About/>
             </TabPanel>
-
 
             <TabPanel className={classes.tabPanels} value={value} index={1}>
                 <Grid container spacing={1}>  
