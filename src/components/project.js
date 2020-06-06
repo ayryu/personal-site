@@ -26,7 +26,7 @@ const Project = ({ project }) => {
     return (
         <>
         <Card className={classes.root}>
-            <CardActionArea href={project.link} >
+            <CardActionArea href={project.link} target='_blank'>
                 <CardMedia
                 className={classes.media}
                 image={project.image}

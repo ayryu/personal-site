@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       // height: 0, paddingTop: '100%', paddingBottom: '45%' for perfect visibility if collapse width: '80%'
       height: 0,
       paddingTop: '100%',
-      paddingBottom: '45%'
+      paddingBottom: '45%',
     },
 }));
 
@@ -38,7 +38,7 @@ const Icons = () => {
     const classes = useStyles();
     const [ resumePanel, setResumePanel] = useState(false);
     const [ resumeView, setResumeView ] = useState(false);
-    
+        
       const handleResumeOpen = () => {
         setResumePanel((prev) => !prev);
       };
@@ -48,7 +48,6 @@ const Icons = () => {
           setResumeView(view => !view);
       }
 
-      console.log('resumeView: ', resumeView)
 
     const collapseInfo = [
         {
@@ -63,18 +62,22 @@ const Icons = () => {
         {
             title: 'Resume',
             id: 'RESUME',
+            clickHandler: handleResumeOpen,
         },
         {
             title: 'ayryu@uwaterloo.ca',
             id: 'EMAIL',
+            clickHandler: event => window.location.href='mailto:ayryu@uwaterloo.ca',
         },
         {
             title: 'Github',
             id: 'GITHUB',
+            clickHandler: event => window.open('https://github.com/ayryu', '_blank'),
         },
         {
             title: 'LinkedIn',
             id: 'LINKEDIN',
+            clickHandler: event => window.open('https://www.linkedin.com/in/alexander-ryu/', '_blank'),
         },
     ]
 
@@ -83,23 +86,22 @@ const Icons = () => {
             case 'RESUME':
                 return(<AssignmentIndOutlinedIcon 
                     style={{width: 60, height: 60,}} 
-                    onClick={handleResumeOpen} />); 
+                     />); 
             case 'EMAIL':
                 return(<MailOutlineIcon 
                     style={{width: 60, height: 60,}} 
                     aria-label='Email'
-                    onClick={event => window.location.href='mailto:ayryu@uwaterloo.ca'}/>);      
+                    />);      
             case 'GITHUB':
                 return(<GitHubIcon 
                     style={{width: 60, height: 60,}} 
                     aria-label='Github'
-                    onClick={event => window.location.href='https://github.com/ayryu'}
                     />);                  
             default:
                 return(<LinkedInIcon 
                     style={{width: 60, height: 60,}} 
                     aria-label='LinkedIn' 
-                    onClick={event => window.location.href='https://www.linkedin.com/in/alexander-ryu/'}/>);
+                    />);
         }
     }
 
@@ -113,14 +115,19 @@ const Icons = () => {
                         viewState={resumeView} 
                         toggleView={toggleResumeView}
                         handleCollapse={handleResumeOpen}
-                    />
+                    />  
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <a style={{ marginRight: 10 }} href='/static/resume/darkresume.pdf' download>Download Resume (Dark Mode)</a>
+                        <a href='/static/resume/lightresume.pdf' download>Download Resume (Light Mode)</a>
+                    </div>
                 </Collapse>
             )}
+
 
             <Grid container className={classes.links} background="#000" spacing={0}>
                 {icons.map(icon =>
                     <Grid item key={icon.id}>
-                        <IconButton>
+                        <IconButton onClick={icon.clickHandler}>
                             <Tooltip title={icon.title} arrow>
                                 {getIcon(icon.id)}
                             </Tooltip>
