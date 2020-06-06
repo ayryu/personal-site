@@ -2,7 +2,7 @@ a {
     color:#FFFFFF
   }
 
-button:hover > * {
+a:hover, button:hover > * {
   fill: currentColor;
   color: #20B2AA;
 } 
